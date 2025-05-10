@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>Mr. Web | مستر وب</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(135deg, #0d0d2b, #000);
+      color: #fff;
+      text-align: center;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #007BFF, #000);
+      border-radius: 50%;
+      margin: 30px auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;
+      box-shadow: 0 0 20px #007BFF;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 10px 0 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 12px 10px;
+      padding: 12px 28px;
+      font-size: 1em;
+      border-radius: 40px;
+      border: 2px solid #007BFF;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #007BFF;
+      color: #000;
+    }
+
+    .btn-social {
+      background-color: transparent;
+      border: 2px solid #007BFF;
+    }
+
+    .number-btn {
+      display: inline-block;
+      border: 2px solid #007BFF;
+      color: #fff;
+      margin: 10px;
+      padding: 10px 22px;
+      border-radius: 40px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .footer {
+      font-size: 0.9em;
+      color: #bbb;
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    .slide {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0d0d2b, #000);
+      z-index: 999;
+      overflow-y: auto;
+      padding: 40px 20px;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide h2 {
+      margin-top: 20px;
+      font-size: 28px;
+    }
+
+    .slide a {
+      display: block;
+      color: #00bfff;
+      margin: 15px 0;
+      font-size: 16px;
+      text-decoration: underline;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: 2px solid #007BFF;
+      border-radius: 40px;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">MW</div>
+  <h1>Mr. Web | مستر وب</h1>
+
+  <div>
+    <a class="btn btn-social" href="https://wa.me/09012405540" target="_blank">واتساپ</a>
+    <a class="btn btn-social" href="https://t.me/yourtelegram" target="_blank">تلگرام</a>
+    <a class="btn btn-social" href="https://wa.me/09012405540" target="_blank">مشاوره و خرید آنلاین</a>
+    <span class="btn" onclick="openSlide()">نمونه‌کارها</span>
+  </div>
+
+  <div>
+    <a class="number-btn" href="tel:+989012405540">+989012405540</a>
+    <a class="number-btn" href="tel:+989030302044">+989030302044</a>
+  </div>
+
+  <!-- بخش توضیحات اضافه شده -->
+  <div style="margin-top: 40px; padding: 0 20px;">
+    <h2 style="color: #00bfff; font-size: 24px;">چرا مستر وب؟</h2>
+    <p style="font-size: 16px; line-height: 1.8; max-width: 700px; margin: 10px auto;">
+      طراحی مدرن و واکنش‌گرا، تحویل سریع، پشتیبانی مداوم و مشاوره رایگان تنها بخشی از ویژگی‌های مستر وب است. 
+      ما تخصص داریم در طراحی سایت‌های شخصی، فروشگاهی و شرکتی با بهترین کیفیت و مناسب‌ترین قیمت.
+    </p>
+
+    <h2 style="color: #00bfff; font-size: 24px; margin-top: 40px;">خدمات ما</h2>
+    <ul style="list-style: none; padding: 0; font-size: 16px;">
+      <li>✔ طراحی سایت شخصی، شرکتی و فروشگاهی</li>
+      <li>✔ چاپ کارت ویزیت اختصاصی و استند تبلیغاتی</li>
+      <li>✔ اتصال مستقیم واتساپ و تلگرام برای مشاوره</li>
+      <li>✔ ثبت دامنه و راه‌اندازی اولیه سایت</li>
+    </ul>
+  </div>
+<div style="margin-top: 60px; padding: 0 20px;">
+  <h2 style="color: #00bfff; font-size: 24px;">چه نوع سایت‌هایی طراحی می‌کنیم؟</h2>
+  <p style="font-size: 16px; line-height: 1.8; max-width: 700px; margin: 10px auto;">
+    در مستر وب، ما آماده‌ایم تا انواع مختلفی از وب‌سایت‌ها را بر اساس نیاز و هدف شما طراحی و پیاده‌سازی کنیم. برخی از محبوب‌ترین انواع سایت‌هایی که طراحی می‌کنیم:
+  </p>
+  <ul style="text-align: right; direction: rtl; max-width: 700px; margin: 0 auto; font-size: 16px; line-height: 2;">
+    <li><strong>سایت شخصی:</strong> مناسب برای رزومه آنلاین، نمونه‌کار هنرمندان، نویسندگان، فریلنسرها و مربیان.</li>
+    <li><strong>سایت فروشگاهی:</strong> جهت فروش آنلاین محصولات فیزیکی یا دیجیتال با قابلیت معرفی کالا، سبد خرید، و تماس مستقیم با فروشنده.</li>
+    <li><strong>سایت شرکتی:</strong> معرفی خدمات، پروژه‌ها، اعضای تیم و راه‌های ارتباطی برای شرکت‌ها، کارخانه‌ها و دفاتر خدماتی.</li>
+    <li><strong>سایت تبلیغاتی و کارت ویزیت دیجیتال:</strong> مخصوص معرفی سریع شما در یک صفحه، با لینک مستقیم به شبکه‌های اجتماعی.</li>
+    <li><strong>سایت خدماتی یا رزرو وقت:</strong> مناسب برای پزشکان، سالن‌های زیبایی، کلینیک‌ها و مشاوران با قابلیت نمایش زمان‌های آزاد.</li>
+    <li><strong>سایت آموزشی:</strong> برای ارائه دوره‌ها، مقالات، ویدیوهای آموزشی و دریافت بازخورد یا پرسش‌وپاسخ از کاربران.</li>
+  </ul>
+  <p style="font-size: 16px; line-height: 1.8; max-width: 700px; margin: 20px auto;">
+    هر سایت با طراحی اختصاصی، پشتیبانی کامل، قابلیت اتصال به واتساپ و شبکه‌های اجتماعی و بهینه‌سازی برای موبایل و گوگل ارائه می‌شود.
+  </p>
+</div>
+  <div class="footer">
+    مستر وب | طراح سایت‌های ساده، زیبا و حرفه‌ای برای شما<br>
+    تمامی حقوق محفوظ است - ۱۴۰۴
+  </div>
+
+  <!-- اسلاید نمونه‌کار -->
+  <div id="slideGallery" class="slide">
+    <div class="logo">MW</div>
+    <button class="close-btn" onclick="closeSlide()">بستن</button>
+    <h2>نمونه‌کارهای مستر وب</h2>
+    <a href="https://golden001871.github.io/golden.mobile_mashad/" target="_blank">گلدن موبایل</a>
+    <a href="https://otagh100.com/m/digicarte.php?Number=2088" target="_blank">کافه کوروش</a>
+    <a href="https://otagh100.com/m/digicarte.php?Number=2026" target="_blank">کباب سرای عالیجناب</a>
+    <a href="https://otagh100.com/m/digicarte.php?Number=74" target="_blank">مربی پرورش اندام</a>
+  </div>
+
+  <script>
+    function openSlide() {
+      document.getElementById('slideGallery').classList.add('active');
+    }
+
+    function closeSlide() {
+      document.getElementById('slideGallery').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>
